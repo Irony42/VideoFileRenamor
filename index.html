@@ -4,11 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Files Renamer</title>
+    <style>
+        body {
+            background-color: #282c34;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container > div {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #61dafb;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+            border: 2px dashed #61dafb;
+            border-radius: 10px;
+            background-color: transparent;
+            color: #ffffff;
+            outline: none;
+        }
+
+        input[type="file"]:hover {
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #61dafb;
+            color: #282c34;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ffa500;
+        }
+    </style>
 </head>
 <body>
-    <h1>Video Files Renamer</h1>
-    <input type="file" id="folderInput" webkitdirectory directory />
-    <button id="renameButton">Rename Videos</button>
+    <div class="container">
+    <div><h1>Video Files Renamer</h1></div>
+    <div><input type="file" id="folderInput" webkitdirectory directory /></div>
+    <div><button id="renameButton">Rename Videos</button></div>
     <script type="module" src="./renderer.js"></script>
+</div>
 </body>
 </html>
