@@ -25,7 +25,7 @@ ipcMain.on('start-renaming', (event, selectedFolderPath) => {
 
 function getFileCreationDate(filePath) {
     const stats = fs.statSync(filePath);
-    return stats.birthtime;
+    return stats.mtime;
 }
 
 function renameVideosInDirectory(filePath) {
