@@ -44,5 +44,6 @@ function renameVideosInDirectory(filePath) {
         console.log('Renaming complete.');
     } catch (err) {
         console.error('Error:', err);
+        window.alert(`Error while renaming ${filePath}: ${err}`);
     }
 }
