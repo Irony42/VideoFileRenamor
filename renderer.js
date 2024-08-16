@@ -6,5 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.values(folderInput.files).forEach(file => {
             window.api.send('start-renaming', file.path);
         });
+        window.alert('Videos have been renamed!');
     });
 });
