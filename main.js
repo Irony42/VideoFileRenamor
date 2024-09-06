@@ -31,7 +31,7 @@ function getFileCreationDate(filePath) {
 function renameVideosInDirectory(filePath) {
     try {
         const fileExtension = path.extname(filePath).toLowerCase();
-        if (fileExtension === '.mp4' || fileExtension === '.mov' || fileExtension === '.avi') {
+        if (['.mp4', '.mov', '.avi'].includes(fileExtension)) {
             const creationDate = getFileCreationDate(filePath);
             const file = path.basename(filePath);
             const formattedDate = creationDate.toISOString().substring(0, 10);
